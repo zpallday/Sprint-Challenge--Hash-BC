@@ -26,7 +26,7 @@ def proof_of_work(last_proof):
     last_hash = hashlib.sha256(f'{last_proof}'.encode()).hexdigest()
     proof = last_proof*randint(0, 100)
     while valid_proof(last_hash, proof) is False:
-        proof += 1
+          proof += 1
 
     print("Proof found: " + str(proof) + " in " + str(timer() - start))
     return proof
